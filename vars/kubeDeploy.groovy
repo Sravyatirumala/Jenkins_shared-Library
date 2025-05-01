@@ -3,11 +3,16 @@ def call() {
         caCertificate: '', 
         clusterName: '', 
         contextName: '', 
-        credentialsId: 'k8scert', 
+        credentialsId: 'k8scertificate', 
         namespace: '', 
         restrictKubeConfigAccess: false, 
         serverUrl: ''
     ) {
-        sh "kubectl apply -f deployment.yml"
+        sh '''
+            echo "Current directory contents:"
+            ls -l
+            echo "Running kubectl apply..."
+            kubectl apply -f deployment.yml
+        '''
     }
 }
