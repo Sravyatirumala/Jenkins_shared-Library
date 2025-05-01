@@ -3,7 +3,7 @@ def call() {
         caCertificate: '', 
         clusterName: '', 
         contextName: '', 
-        credentialsId: 'k8'scertificate', 
+        credentialsId: 'k8scertificate', 
         namespace: '', 
         restrictKubeConfigAccess: false, 
         serverUrl: ''
